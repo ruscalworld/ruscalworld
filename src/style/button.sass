@@ -1,0 +1,50 @@
+.button
+  text-decoration: none
+  color: inherit
+  font-weight: 500
+  position: relative
+  width: 200px
+  display: flex
+  align-items: center
+
+  padding: 16px 32px 16px 24px
+  backdrop-filter: blur(8px)
+  transition: .5s
+  background-color: rgba(255, 255, 255, .1)
+  border-radius: 8px
+
+  &:hover
+    transition: .5s
+    backdrop-filter: blur(16px)
+    background-color: rgba(255, 255, 255, .2)
+
+  svg
+    font-size: 1.75em
+    margin-top: auto
+    margin-bottom: auto
+
+  .content
+    text-align: left
+    line-height: 1em
+    margin-left: 12px
+
+    .service
+      margin-bottom: 0
+      font-weight: 600
+
+    .username
+      margin-top: 0
+      font-size: 0.75em
+
+.buttons
+  display: flex
+  justify-content: space-around
+  align-content: space-between
+  min-height: 180px
+  flex-wrap: wrap
+
+  @media screen and (min-width: 1000px)
+    width: 50vw
+
+  @media screen and (max-width: 1000px)
+    width: 90%
