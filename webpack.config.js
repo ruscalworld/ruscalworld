@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 
 module.exports = {
     entry: './src/index.js',
@@ -36,7 +37,8 @@ module.exports = {
                     to: "robots.txt"
                 }
             ]
-        })
+        }),
+        new FaviconsWebpackPlugin('./src/images/logo.png'),
     ],
     devServer: {
         contentBase: path.join(__dirname, '/dist'),
