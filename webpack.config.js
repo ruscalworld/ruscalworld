@@ -35,6 +35,10 @@ module.exports = {
                 {
                     from: "./src/robots.txt",
                     to: "robots.txt"
+                },
+                {
+                    from: "./src/manifest.json",
+                    to: "manifest.json"
                 }
             ]
         }),
