@@ -3,7 +3,7 @@ import './style/app.sass';
 import BackgroundImage from './images/background.jpg';
 import Button from "./components/Button";
 import { faAt } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faYoutube, faDiscord, faVk, faTelegramPlane } from "@fortawesome/free-brands-svg-icons";
+import {faGithub, faYoutube, faDiscord, faVk, faTelegramPlane, faSteam} from "@fortawesome/free-brands-svg-icons";
 
 function App() {
     return (
@@ -28,10 +28,10 @@ function App() {
                         <br/>
                         <span className="username">/RuscalWorld</span>
                     </Button>
-                    <Button href="https://vk.com/gladyschevnl" icon={ faVk }>
-                        <span className="service">VK</span>
+                    <Button href="https://steamcommunity.com/id/ruscalworld" icon={ faSteam }>
+                        <span className="service">Steam</span>
                         <br/>
-                        <span className="username">/gladyschevnl</span>
+                        <span className="username">/ruscalworld</span>
                     </Button>
                     <Button href="https://youtube.com/channel/UCdqRU3jyD2xo6PhzK-mF2jw" icon={ faYoutube }>
                         <span className="service">YouTube</span>
