@@ -3,12 +3,12 @@ import './style/app.sass';
 import BackgroundImage from './images/background.jpg';
 import Button from "./components/Button";
 import { faAt } from "@fortawesome/free-solid-svg-icons";
-import {faGithub, faYoutube, faDiscord, faVk, faTelegramPlane, faSteam} from "@fortawesome/free-brands-svg-icons";
+import { faDiscord, faGithub, faSteam, faTelegramPlane, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 function App() {
     return (
         <>
-            <img src={ BackgroundImage } alt="" className="background-image" />
+            <img src={ BackgroundImage } alt="" className="background-image"/>
             <main>
                 <h1>RuscalWorld</h1>
                 <br/>
