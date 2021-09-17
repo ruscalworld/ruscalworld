@@ -11,11 +11,7 @@ function App() {
             <img src={ BackgroundImage } alt="" className="background-image"/>
             <main>
                 <h1>RuscalWorld</h1>
-                <p>
-                    Hi! I'm RuscalWorld, and I'm fond of developing on Java, Golang and JavaScript.
-                    You can find my projects on GitHub and contact me via e-mail or Discord.
-                </p>
-                <br/><hr/><br/>
+                <br/>
                 <div className="buttons">
                     <Button href="https://github.com/ruscalworld" icon={ faGithub }>
                         <span className="service">GitHub</span>
@@ -48,7 +44,7 @@ function App() {
                         <span className="username">me@ruscalworld.ru</span>
                     </Button>
                 </div>
-                <br/><hr/><br/>
+                <br/>
                 <div className="info">
                     <p>This page is used as just placeholder. All stuff is located on private subdomains.</p>
                 </div>
