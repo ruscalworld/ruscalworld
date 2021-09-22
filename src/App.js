@@ -46,7 +46,7 @@ function App() {
                 </div>
                 <br/>
                 <div className="info">
-                    <p>This page is used as just placeholder. All stuff is located on private subdomains.</p>
+                    <p>This page is just a placeholder. All stuff is located on private subdomains.</p>
                 </div>
             </main>
         </>
