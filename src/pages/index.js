@@ -3,6 +3,9 @@ import Head from 'next/head'
 import Title from '@/components/Title'
 import classNames from 'classnames'
 import { useElementState } from '@/components/Navigation'
+import dynamic from 'next/dynamic'
+
+const CornerDecoration = dynamic(() => import('@/components/CornerDecoration'), { ssr: false })
 
 export default function Index() {
     const { currentState: showBiography } = useElementState('biography')
@@ -15,6 +18,7 @@ export default function Index() {
                 <meta name='viewport' content='width=device-width, initial-scale=1'/>
                 <link rel='icon' href='/favicon.ico'/>
             </Head>
+            <CornerDecoration/>
             <main className={ styles.main }>
                 <div className={ classNames(styles.titleWrapper, {
                     [ styles.withBiography ]: showBiography,
