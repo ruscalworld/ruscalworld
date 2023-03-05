@@ -1,0 +1,19 @@
+@import "options"
+
+$inner-margin: 32px
+
+.main
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+
+  & > *
+    margin: $inner-margin
+
+.titleWrapper
+  height: calc(100vh - #{ $inner-margin * 2 })
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+
+  &.withBiography
+    justify-content: flex-start
