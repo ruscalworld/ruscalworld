@@ -19,7 +19,11 @@
     "react-i18next": "^12.2.0"
   },
   "devDependencies": {
+    "@fortawesome/free-brands-svg-icons": "^6.3.0",
+    "@fortawesome/free-solid-svg-icons": "^6.3.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "prop-types": "^15.8.1",
+    "react-transition-group": "^4.4.5",
     "sass": "^1.58.3"
   }
 }

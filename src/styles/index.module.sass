@@ -14,6 +14,7 @@ $inner-margin: 32px
   display: flex
   flex-direction: column
   justify-content: flex-end
+  width: min-content
 
-  &.withBiography
-    justify-content: flex-start
+  & > div:nth-child(2)
+    transition: 0.5s cubic-bezier(0.25, 0.1, 0, 1)

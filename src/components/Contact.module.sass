@@ -1,0 +1,30 @@
+@import "../styles/options"
+@import "./Contacts.module"
+
+.contact
+  transition: .5s
+  display: flex
+  gap: 16px
+  align-items: center
+
+  .iconWrapper
+    background-color: $accent-background-color
+    color: $accent-foreground-color
+    width: $size
+    height: $size
+    padding: 8px
+
+    display: flex
+    justify-content: center
+    align-items: center
+
+  .descriptionWrapper
+    h6, p
+      margin: 0
+
+    h6
+      font-size: 1.2em
+
+    p
+      font-size: 0.9em
+
