@@ -1,6 +1,7 @@
 import styles from './Contact.module.sass'
 import { Transition } from 'react-transition-group'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Link from 'next/link'
 
 const transitions = {
     entering: {
@@ -22,19 +23,21 @@ const transitions = {
     }
 }
 
-function Contact({ timeout, open, icon, title, text }) {
+function Contact({ timeout, open, icon, link, title, text }) {
     return (
         <Transition in={ open } timeout={ timeout }>
             { state => (
-                <div className={ styles.contact } style={{ ...transitions[state] }}>
-                    <div className={ styles.iconWrapper }>
-                        { icon && <FontAwesomeIcon icon={ icon }/> }
+                <Link href={ link ?? '#' }>
+                    <div className={ styles.contact } style={{ ...transitions[state] }}>
+                        <div className={ styles.iconWrapper }>
+                            { icon && <FontAwesomeIcon icon={ icon }/> }
+                        </div>
+                        <div className={ styles.descriptionWrapper }>
+                            <h6>{ title }</h6>
+                            <p>{ text }</p>
+                        </div>
                     </div>
-                    <div className={ styles.descriptionWrapper }>
-                        <h6>{ title }</h6>
-                        <p>{ text }</p>
-                    </div>
-                </div>
+                </Link>
             )}
         </Transition>
     )

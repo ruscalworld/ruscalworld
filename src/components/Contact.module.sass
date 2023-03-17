@@ -2,9 +2,8 @@
 @import "./Contacts.module"
 
 .contact
-  transition: .5s
+  transition: all .5s, outline 50ms
   display: flex
-  gap: 16px
   align-items: center
 
   .iconWrapper
@@ -19,6 +18,8 @@
     align-items: center
 
   .descriptionWrapper
+    padding: 0 16px
+
     h6, p
       margin: 0
 
@@ -28,3 +29,9 @@
     p
       font-size: 0.9em
 
+  &:hover
+    background-color: $selection-background-color
+    cursor: pointer
+
+  &:active
+    outline: $accent-background-color solid 2px

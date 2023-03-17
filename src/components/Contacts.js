@@ -18,7 +18,7 @@ const contacts = [
     {
         icon: faGithub,
         link: 'https://github.com/ruscalworld',
-        text: 'ruscalworld',
+        text: '/ruscalworld',
         title: 'GitHub',
     },
 ]

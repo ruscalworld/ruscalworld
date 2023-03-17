@@ -1,11 +1,14 @@
 import styles from './NavLink.module.sass'
 import PropTypes from 'prop-types'
+import Link from 'next/link'
 
-function NavLink({ onClick, children }) {
+function NavLink({ onClick, locale, children }) {
     return (
-        <div className={ styles.link } onClick={ onClick ?? (() => {}) }>
-            { children }
-        </div>
+        <Link href='#' onClick={ onClick ?? (() => {}) } locale={ locale }>
+            <div className={ styles.link }>
+                { children }
+            </div>
+        </Link>
     )
 }
 

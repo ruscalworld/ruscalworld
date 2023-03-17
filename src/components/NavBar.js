@@ -38,13 +38,13 @@ function ContactsLink() {
 }
 
 function LocaleSwitcher() {
-    const { locale, locales, push } = useRouter()
+    const { locale, locales } = useRouter()
 
     function getNextLocale() {
         return locales.filter((v) => v !== locale)[0]
     }
 
-    return <NavLink onClick={ () => push('/', '/', { locale: getNextLocale() }) }>{ locale }</NavLink>
+    return <NavLink locale={ getNextLocale() }>{ locale }</NavLink>
 }
 
 export default NavBar
