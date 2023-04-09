@@ -1,6 +1,6 @@
 import styles from '@/styles/index.module.sass'
 import Head from 'next/head'
-import Title from '@/components/Title'
+import SiteName from '@/components/SiteName'
 import classNames from 'classnames'
 import { useElementState } from '@/components/Navigation'
 import dynamic from 'next/dynamic'
@@ -22,7 +22,7 @@ export default function Index() {
             <CornerDecoration/>
             <main className={ styles.main }>
                 <div className={ classNames(styles.titleWrapper) }>
-                    <Title/>
+                    <SiteName/>
                     <Contacts open={ showContacts }/>
                 </div>
                 <div>
