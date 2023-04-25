@@ -8,8 +8,6 @@ function NavBar() {
     return (
         <nav className={ styles.nav }>
             <div className={ styles.group }>
-                <BiographyLink/>
-                <ProjectsLink/>
                 <ContactsLink/>
             </div>
             <div className={ styles.group }>
