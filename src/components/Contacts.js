@@ -12,7 +12,7 @@ const contacts = [
     },
     {
         icon: faDiscord,
-        text: 'RuscalWorld#7262',
+        text: 'ruscalworld',
         title: 'Discord',
     },
     {
