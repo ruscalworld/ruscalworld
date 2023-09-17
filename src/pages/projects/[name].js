@@ -1,19 +1,16 @@
 import fs from 'fs'
 import path from 'path'
-import matter from 'gray-matter'
 import TextPageLayout from '@/components/layout/TextPageLayout'
-import { unified } from 'unified'
-import remarkParse from 'remark-parse'
-import remarkRehype from 'remark-rehype'
-import rehypeSanitize from 'rehype-sanitize'
-import rehypeStringify from 'rehype-stringify'
-import Title from '@/components/Title'
+import { MDXRemote } from 'next-mdx-remote'
+import { serialize } from 'next-mdx-remote/serialize'
+import SiteName from '@/components/SiteName'
+import Contacts from '@/components/Contacts'
 
-function Project(props) {
+function Project({ source }) {
     return (
         <TextPageLayout>
-            <Title>{ props.data.title }</Title>
-            <div dangerouslySetInnerHTML={{ __html: props.content }}/>
+            {/*<Title>{ props.data.title }</Title>*/}
+            <MDXRemote { ...source } components={ { SiteName, Contacts } }/>
         </TextPageLayout>
     )
 }
@@ -26,20 +23,13 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-    const path = `data/projects/${ context.params.name }.md`
+    const path = `data/projects/${ context.params.name }.mdx`
 
     const fileContents = fs.readFileSync(path, 'utf-8')
-    const { content, data } = matter(fileContents)
-
-    const text = await unified()
-        .use(remarkParse)
-        .use(remarkRehype)
-        .use(rehypeSanitize)
-        .use(rehypeStringify)
-        .process(content)
+    const source = await serialize(fileContents, { parseFrontmatter: true })
 
     return {
-        props: { data, content: String(text) }
+        props: { source }
     }
 }
 
