@@ -7,6 +7,7 @@ import SiteName from '@/components/SiteName'
 import Contacts from '@/components/Contacts'
 import Title from '@/components/Title'
 import { NextSeo } from 'next-seo'
+import { useRouter } from 'next/router'
 
 function Project({ source }) {
     return (
@@ -19,14 +20,18 @@ function Project({ source }) {
 }
 
 export async function getStaticPaths() {
-    const files = fs.readdirSync('data/projects')
-    const paths = files.map(file => ({ params: { name: path.parse(file).name } }))
+    const localeDirectories = fs.readdirSync('data/projects')
+    const paths = []
+    for (const locale of localeDirectories) {
+        const files = fs.readdirSync(`data/projects/${ locale }`)
+        paths.push(...files.map(file => ({ params: { name: path.parse(file).name }, locale })))
+    }
 
     return { paths, fallback: false }
 }
 
-export async function getStaticProps(context) {
-    const path = `data/projects/${ context.params.name }.mdx`
+export async function getStaticProps({ locale, params }) {
+    const path = `data/projects/${ locale }/${ params.name }.mdx`
 
     const fileContents = fs.readFileSync(path, 'utf-8')
     const source = await serialize(fileContents, { parseFrontmatter: true })
