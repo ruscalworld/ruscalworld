@@ -5,11 +5,12 @@ import { MDXRemote } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
 import SiteName from '@/components/SiteName'
 import Contacts from '@/components/Contacts'
+import Title from '@/components/Title'
 
 function Project({ source }) {
     return (
         <TextPageLayout>
-            {/*<Title>{ props.data.title }</Title>*/}
+            { source.frontmatter.title && <Title>{ source.frontmatter.title }</Title> }
             <MDXRemote { ...source } components={ { SiteName, Contacts } }/>
         </TextPageLayout>
     )
