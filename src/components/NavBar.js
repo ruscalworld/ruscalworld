@@ -5,10 +5,13 @@ import { useRouter } from 'next/router'
 import { useTranslation } from 'react-i18next'
 
 function NavBar() {
+    const { pathname } = useRouter()
+    const isMainPage = pathname === '/'
+
     return (
         <nav className={ styles.nav }>
             <div className={ styles.group }>
-                <ContactsLink/>
+                { isMainPage && <ContactsLink/> }
             </div>
             <div className={ styles.group }>
                 <LocaleSwitcher/>
