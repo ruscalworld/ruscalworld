@@ -9,6 +9,7 @@ import { Navigation } from '@/components/Navigation'
 import { Exo_2 as Exo2, Sofia_Sans as SofiaSans } from 'next/font/google'
 import { FontContext } from '@/components/FontProvider'
 import { DefaultSeo } from 'next-seo'
+import { Analytics } from '@vercel/analytics/react'
 
 const exo2 = Exo2({ subsets: [ 'cyrillic', 'latin' ] })
 const sofiaSans = SofiaSans({ subsets: [ 'cyrillic', 'latin' ] })
@@ -30,7 +31,7 @@ export default function App({ Component, pageProps }) {
 
     // noinspection HtmlUnknownAttribute
     return (
-        <Navigation>
+        <>
             <DefaultSeo
                 openGraph={{
                     type: 'website',
@@ -44,9 +45,12 @@ export default function App({ Component, pageProps }) {
                 themeColor='#FFFF00'
             />
             <style jsx global>{ `html { font-family: ${ exo2.style.fontFamily } }` }</style>
-            <FontContext.Provider value={{ default: exo2.className, highlight: sofiaSans.className }}>
-                <Component { ...pageProps }/>
-            </FontContext.Provider>
-        </Navigation>
+            <Analytics/>
+            <Navigation>
+                <FontContext.Provider value={{ default: exo2.className, highlight: sofiaSans.className }}>
+                    <Component { ...pageProps }/>
+                </FontContext.Provider>
+            </Navigation>
+        </>
     )
 }
