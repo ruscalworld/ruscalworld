@@ -1,6 +1,39 @@
 {
-  "extends": "next/core-web-vitals",
+  "extends": ["next/core-web-vitals"],
   "rules": {
-    "react-hooks/exhaustive-deps": "off"
+    "@next/next/link-passhref": "off",
+    "@next/next/no-img-element": "off",
+    "react/self-closing-comp": ["error"],
+    "react-hooks/exhaustive-deps": "off",
+    "react/jsx-curly-spacing": ["error", {
+      "when": "always",
+      "children": true,
+      "spacing": {
+        "objectLiterals": "never"
+      }
+    }],
+    "react/jsx-tag-spacing": ["error", {
+      "beforeSelfClosing": "never"
+    }],
+    "jsx-quotes": ["error", "prefer-single"],
+    "array-bracket-spacing": ["error", "always"],
+    "object-curly-spacing": ["error", "always"],
+    "block-spacing": ["error", "always"],
+    "computed-property-spacing": ["error", "never"],
+    "template-curly-spacing": ["error", "always"],
+    "eol-last": ["error", "always"],
+    "no-multiple-empty-lines": ["error", {
+      "max": 1
+    }],
+    "quotes": ["error", "single"],
+    "semi": ["error", "never"],
+    "no-empty": ["error"],
+    "indent": ["error", 4, {
+      "SwitchCase": 1
+    }],
+    "key-spacing": ["error", {
+      "afterColon": true
+    }],
+    "camelcase": ["error"]
   }
 }

@@ -38,7 +38,7 @@ function Contact({ timeout, open, icon, link, title, text }) {
                         </div>
                     </div>
                 </Link>
-            )}
+            ) }
         </Transition>
     )
 }

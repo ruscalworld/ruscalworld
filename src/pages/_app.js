@@ -6,10 +6,13 @@ import { useEffect } from 'react'
 import ru from '@/i18n/ru.json'
 import en from '@/i18n/en.json'
 import { Navigation } from '@/components/Navigation'
+// eslint-disable-next-line camelcase
 import { Exo_2, Sofia_Sans } from 'next/font/google'
 import { FontContext } from '@/components/FontProvider'
 
+// eslint-disable-next-line camelcase
 const exo_2 = Exo_2({ subsets: [ 'cyrillic', 'latin' ] })
+// eslint-disable-next-line camelcase
 const sofia_sans_semi_condensed = Sofia_Sans({ subsets: [ 'cyrillic', 'latin' ] })
 
 i18n
@@ -29,9 +32,11 @@ export default function App({ Component, pageProps }) {
     // noinspection HtmlUnknownAttribute
     return (
         <Navigation>
-            <style jsx global>{`html { font-family: ${ exo_2.style.fontFamily } }`}</style>
+            { /* eslint-disable-next-line camelcase */ }
+            <style jsx global>{ `html { font-family: ${ exo_2.style.fontFamily } }` }</style>
+            { /* eslint-disable-next-line camelcase */ }
             <FontContext.Provider value={{ default: exo_2.className, highlight: sofia_sans_semi_condensed.className }}>
-                <Component { ...pageProps } />
+                <Component { ...pageProps }/>
             </FontContext.Provider>
         </Navigation>
     )

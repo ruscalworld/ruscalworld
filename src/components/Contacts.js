@@ -27,7 +27,7 @@ export default function Contacts({ open }) {
     return (
         <div className={ classNames(styles.contacts, {
             [styles.open]: open,
-        }) } style={{ gridTemplateColumns: `repeat(${ contacts.length }, 1fr)`}}>
+        }) } style={{ gridTemplateColumns: `repeat(${ contacts.length }, 1fr)` }}>
             { contacts.map((contact, index) => (
                 <Contact key={ index } open={ open } timeout={ open ? 100 * index : 100 } { ...contact }/>
             )) }

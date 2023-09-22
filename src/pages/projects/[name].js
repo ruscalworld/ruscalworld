@@ -11,7 +11,7 @@ function Project({ source }) {
     return (
         <TextPageLayout>
             { source.frontmatter.title && <Title>{ source.frontmatter.title }</Title> }
-            <MDXRemote { ...source } components={ { SiteName, Contacts } }/>
+            <MDXRemote { ...source } components={{ SiteName, Contacts }}/>
         </TextPageLayout>
     )
 }
