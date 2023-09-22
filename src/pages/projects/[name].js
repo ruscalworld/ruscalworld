@@ -6,10 +6,12 @@ import { serialize } from 'next-mdx-remote/serialize'
 import SiteName from '@/components/SiteName'
 import Contacts from '@/components/Contacts'
 import Title from '@/components/Title'
+import { NextSeo } from 'next-seo'
 
 function Project({ source }) {
     return (
         <TextPageLayout>
+            <NextSeo title={ source.frontmatter.title } description={ source.frontmatter.description }/>
             { source.frontmatter.title && <Title>{ source.frontmatter.title }</Title> }
             <MDXRemote { ...source } components={{ SiteName, Contacts }}/>
         </TextPageLayout>

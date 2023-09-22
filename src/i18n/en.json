@@ -1,8 +1,12 @@
 {
   "translation": {
-    "title.slogan": "A junior full-stack software engineer from Moscow",
+    "title.slogan": "A full-stack software engineer from Moscow",
     "nav.biography": "Biography",
     "nav.projects": "Projects",
-    "nav.contacts": "Contacts"
+    "nav.contacts": "Contacts",
+    "meta.titleTemplate": "%s - A personal website of RuscalWorld",
+    "meta.defaultTitle": "A personal website of RuscalWorld",
+    "meta.description": "My personal website with biography, portfolio and CV.",
+    "page.main.title": "Main"
   }
 }

@@ -1,8 +1,12 @@
 {
   "translation": {
-    "title.slogan": "Начинающий full-stack разработчик из Москвы",
+    "title.slogan": "Full-stack разработчик из Москвы",
     "nav.biography": "Биография",
     "nav.projects": "Проекты",
-    "nav.contacts": "Контакты"
+    "nav.contacts": "Контакты",
+    "meta.titleTemplate": "%s - Личный веб-сайт RuscalWorld",
+    "meta.defaultTitle": "Личный веб-сайт RuscalWorld",
+    "meta.description": "Мой личный веб-сайт с биографией, портфолио и резюме.",
+    "page.main.title": "Главная"
   }
 }
