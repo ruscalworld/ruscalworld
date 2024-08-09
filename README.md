@@ -1,4 +1,8 @@
-It's very great to realize that you are interested in my GitHub profile, but it looks like there is nothing so interesting here.
-The only thing I can suggest to you is to look how many people have looked through this empty page:
+# Hi!
 
-![Views](https://komarev.com/ghpvc/?username=ruscalworld&label=Profile%20views&color=0e75b6&style=flat)
+I'm Nikolay, a full-stack software engineer. The languages I mainly use in my projects are Go, Java and JS/TS. Here are the technologies I'm experienced in enough:
+
+* **DevOps**: Docker, k3s, Grafana, Prometheus, GitLab CI
+* **Frontend**: React, Vite, Next.js
+* **Databases**: MySQL, PostgreSQL, MongoDB, Redis
+* **Backend**: Spring Boot, GORM, gRPC, REST API
