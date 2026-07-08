@@ -11,4 +11,4 @@ Here are some of technologies I'm experienced in:
 * **DevOps**: Docker, k3s, Grafana, Prometheus, GitLab CI
 * **Frontend**: React, Vite, Next.js
 * **Databases**: MySQL, PostgreSQL, MongoDB, Redis
-* **Backend**: Spring Boot, GORM, gRPC, REST API
+* **Backend**: Go, Spring Boot, gRPC, REST API
